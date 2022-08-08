@@ -7,6 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Layout: typeof import('./src/assets/views/Layout.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }

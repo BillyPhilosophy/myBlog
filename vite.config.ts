@@ -5,6 +5,11 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
+function resovePath(paths: string) {
+  // 如何 __dirname 找不到 需要 yarn add @types/node --save-dev
+  return resolve(__dirname, paths);
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -26,4 +31,11 @@ export default defineConfig({
       '@': resolve(__dirname, 'src')
     }
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/style/mixins.scss";`
+      }
+    }
+  }
 })
