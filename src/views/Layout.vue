@@ -8,7 +8,7 @@
       <el-header>Header</el-header>
       <el-main>
         <div class="tw-container tw-mx-auto">
-          123123123
+          <p class="test">123</p>
         </div>
       </el-main>
       <el-footer>Footer</el-footer>
@@ -17,5 +17,5 @@
 </template>
 
 <style scoped  lang="scss">
-
+@import url('@/assets/style/layout/layout.scss');
 </style>

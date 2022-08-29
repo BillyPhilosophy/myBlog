@@ -1,1 +1,31 @@
 @import './global/reset.scss';
+@import './global/color.scss';
+@import './global/variable.scss';
+@import './global/font.scss';
+@import './global/public-class.scss';
+@import './global/mixinFn.scss';
+
+// 动画
+@keyframes leftmove-loop {
+
+  0%,
+  100% {
+    transform: translateX(0px) translateY(-50%);
+  }
+
+  50% {
+    transform: translateX(-15px) translateY(-50%);
+  }
+}
+
+@keyframes rightmove-loop {
+
+  0%,
+  100% {
+    transform: translateX(0px) translateY(-50%);
+  }
+
+  50% {
+    transform: translateX(15px) translateY(-50%);
+  }
+}
