@@ -118,3 +118,5 @@ dist
 dist
 dist-ssr
 *.local
+
+*.js text eol=lf

@@ -10,17 +10,24 @@
   },
   "dependencies": {
     "element-plus": "^2.2.12",
-    "vue": "^3.2.37"
+    "postcss-import": "^14.1.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.3"
   },
   "devDependencies": {
     "@types/node": "^18.6.4",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
     "@typescript-eslint/parser": "^5.32.0",
     "@vitejs/plugin-vue": "^3.0.0",
+    "autoprefixer": "^10.4.8",
     "eslint": "^8.21.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^9.3.0",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.3",
+    "sass-loader": "^13.0.2",
+    "tailwindcss": "^3.1.8",
     "typescript": "^4.6.4",
     "unplugin-auto-import": "^0.11.0",
     "unplugin-element-plus": "^0.4.1",

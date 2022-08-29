@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "plugin:vue/vue3-essential",
-        "airbnb-base"
+        "airbnb-base",
+				// "vue-global-api"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -17,5 +18,6 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+			'linebreak-style': ["off", "windows"]
     }
 }
