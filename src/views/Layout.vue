@@ -1,5 +1,8 @@
 <script setup lang="ts">
-// const count = ref(0)
+const count1 = ref<String>('0')
+const props = defineProps({
+  
+})
 </script>
 
 <template>
@@ -8,7 +11,7 @@
       <el-header>Header</el-header>
       <el-main>
         <div class="tw-container tw-mx-auto">
-          <p class="test">123</p>
+          <p class="test">{{count1}}</p>
         </div>
       </el-main>
       <el-footer>Footer</el-footer>

@@ -7,7 +7,7 @@ const routes : RouteRecordRaw[] = [
     },
     {
         path:'/index',
-        component: ()=> import('@/views/Layout.vue')
+        component: ()=> import('@/views/Layout.vue'),
     }
 ];
 
@@ -16,5 +16,8 @@ const router = createRouter({
     history: createWebHistory(),
     routes
 })
+// 路由守卫
+// router.beforeEach(()=>{
 
+// })
 export default router;
