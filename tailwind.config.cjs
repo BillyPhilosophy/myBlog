@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     // Example content paths...
-    './public/**/*.html',
+    // './public/**/*.html',
     './src/**/*.{js,jsx,ts,tsx,vue}',
   ],
   whitelistPatterns:[/el-.+$/],
