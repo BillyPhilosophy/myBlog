@@ -1,15 +1,15 @@
 <template>
-  <nav>
+  <nav class="navbar">
     <el-header>
       <el-row :gutter="20">
         <el-col :span="4">
-          这里是logo
+          <Logo/>
         </el-col>
         <el-col :span="16">
-          这里是navbar
+          <Nav/>
         </el-col>
         <el-col :span="4">
-          这里是user
+          施工中
         </el-col>
       </el-row>
     </el-header>

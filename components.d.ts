@@ -11,6 +11,8 @@ declare module '@vue/runtime-core' {
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElRow: typeof import('element-plus/es')['ElRow']
+    Logo: typeof import('./src/components/TopNavBar/components/Logo.vue')['default']
+    Nav: typeof import('./src/components/TopNavBar/components/Nav.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TopNavBar: typeof import('./src/components/TopNavBar/TopNavBar.vue')['default']

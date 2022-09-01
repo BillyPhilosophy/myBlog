@@ -1,0 +1,43 @@
+
+
+@media screen and (min-width:$mobile-device) {
+  .menu{
+    display: none;
+    justify-content: start;
+      font-size: $big-text;
+      @include font-normal;
+      flex: 1;
+      .menu-list{
+        display: flex;
+        color: $textColor;
+        li{
+          transition: all ease 0.4s;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          padding: $padding-general;
+          align-items: center;
+          justify-content: center;
+          a {
+              font-weight: 600;
+          }
+          span {
+              font-family: 'Cartoonfont', 'Microsoft';
+              font-size: $small-text;
+          }
+          &:hover {
+              text-shadow: 1px 1px 10px $hoverColor;
+          }
+        }
+      }
+  }
+}
+@media screen and (min-width:$smallpc-device) { 
+  .menu{
+    display: flex;
+    .menu-list{
+      display: flex;
+      color: $textColor;
+    }
+  }
+}

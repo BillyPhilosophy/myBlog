@@ -6,8 +6,9 @@
 
 <script setup lang="ts">
   // import { ElConfigProvider } from 'element-plus'
-  import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+  import zhCn from 'element-plus/lib/locale/lang/zh-cn';
+  import resize from '@/utils/resize';
+  onMounted(() => {
+    resize();
+  })
 </script>
-<style scoped>
-
-</style>
