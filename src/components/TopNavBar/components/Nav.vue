@@ -23,7 +23,7 @@
       </li>
       <li @click="$router.push('/index/edit')">
         <router-link to="/index/edit" v-show="false">首页</router-link>
-        <p>写文</p>
+        <p>写作</p>
         <span>Edit</span>
       </li>
       <li>
@@ -33,7 +33,6 @@
              <p>更多</p>
             <span>More</span>
           </div>
-         
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item>

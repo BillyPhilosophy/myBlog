@@ -4,6 +4,7 @@ import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 function resovePath(paths: string) {
   // 如何 __dirname 找不到 需要 yarn add @types/node --save-dev
@@ -25,6 +26,12 @@ export default defineConfig({
       dts: true,
       resolvers: [ElementPlusResolver()],
     }),
+    createSvgIconsPlugin({
+      // 指定需要缓存的图标文件夹
+      iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
+      // 指定symbolId格式
+      symbolId: 'icon-[dir]-[name]'
+    })
   ],
   resolve: {
     alias: {

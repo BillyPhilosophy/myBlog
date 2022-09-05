@@ -3,20 +3,23 @@
     <el-header>
       <el-row :gutter="20">
         <el-col :span="4">
-          <Logo/>
+          <Logo @openPollup=" isShow = true"/>
         </el-col>
         <el-col :span="16">
           <Nav/>
         </el-col>
         <el-col :span="4">
-          施工中
+          
         </el-col>
       </el-row>
     </el-header>
   </nav>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const isShow = ref(false);
+ 
+</script>
 
 <style lang="scss" scoped>
 @import './style/index.scss';

@@ -5,7 +5,9 @@
     <TopNavBar/>
     <!-- main主要的模块入口 -->
     <div class="main">
-      <router-view></router-view>
+      <router-view v-slot="{Component}">
+        <component :is="Component"></component>
+      </router-view>
     </div>
   </div>
 </template>
