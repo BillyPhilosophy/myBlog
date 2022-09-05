@@ -24,6 +24,16 @@ const routes : RouteRecordRaw[] = [
                 path:'messageboard',
                 name:'Messageboard',
                 component: () => import('@/views/messageboard/Messageboard.vue')
+            },
+            {
+                path:'anime',
+                name:'Anime',
+                component: () => import('@/views/anime/Anime.vue')
+            },
+            {
+                path:'edit',
+                name:'Edit',
+                component: () => import('@/views/edit/Edit.vue')
             }
         ]
     }

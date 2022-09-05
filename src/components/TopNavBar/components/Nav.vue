@@ -27,15 +27,53 @@
         <span>Edit</span>
       </li>
       <li>
-        <router-link to="/index"></router-link>
-        <p>更多</p>
-        <span>Index</span>
+        <router-link to="/index/picture" v-show="false">首页</router-link>
+        <el-dropdown>
+          <div class="tw-flex-col tw-justify-between">
+             <p>更多</p>
+            <span>More</span>
+          </div>
+         
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item>
+                <div
+                  class="tw-flex tw-justify-between tw-items-center"
+                  @click="$router.push('/index/picture')"
+                >
+                  <SvgIcon name="tupian" class="tw-w-8 tw-h-8 tw-mr-2" />
+                  <p>画廊</p>
+                </div>
+              </el-dropdown-item>
+              <el-dropdown-item>
+                <div
+                  class="tw-flex tw-justify-between tw-items-center"
+                  @click="$router.push('/index/aboutme')"
+                >
+                  <SvgIcon name="yonghu" class="tw-w-8 tw-h-8 tw-mr-2" />
+                  <p>关于我</p>
+                </div>
+              </el-dropdown-item>
+              <el-dropdown-item>
+                <div
+                  class="tw-flex tw-justify-between tw-items-center"
+                  @click="$router.push('/index/friendslink')"
+                >
+                  <SvgIcon name="link" class="tw-w-8 tw-h-8 tw-mr-2" />
+                  <p>友链</p>
+                </div>
+              </el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
       </li>
     </ul>
   </nav>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  
+</script>
 
 <style lang="scss" scoped >
   @import '../style/nav.scss'

@@ -1,43 +1,58 @@
+@media screen and (min-width: $mobile-device) {
 
-
-@media screen and (min-width:$mobile-device) {
-  .menu{
-    display: none;
-    justify-content: start;
+  // 导航栏样式
+  .menu {
+      display: none;
+      justify-content: start;
       font-size: $big-text;
-      @include font-normal;
+      @include font-normal();
       flex: 1;
-      .menu-list{
-        display: flex;
-        color: $textColor;
-        li{
-          transition: all ease 0.4s;
-          cursor: pointer;
+      .menu-list {
           display: flex;
-          flex-direction: column;
-          padding: $padding-general;
-          align-items: center;
-          justify-content: center;
-          a {
-              font-weight: 600;
+          color: $textColor;
+          li {
+              .drop-item{
+                  display: flex;
+                  
+              }
+              :deep(.el-dropdown){
+                  font-size: $big-text;
+                  text-align: center;
+                  color: $textColor;
+                  
+                  span {
+                      display: block;
+                      margin-top: 4px;
+                  }
+                  
+              }
+              transition: all ease 0.4s;
+              cursor: pointer;
+              display: flex;
+              flex-direction: column;
+              padding: $padding-general;
+              align-items: center;
+              justify-content: center;
+              a {
+                  font-weight: 600;
+              }
+              span {
+                  font-family: 'Cartoonfont', 'Microsoft';
+                  font-size: $small-text;
+              }
+              &:hover {
+                  text-shadow: 1px 1px 10px $hoverColor;
+              }
           }
-          span {
-              font-family: 'Cartoonfont', 'Microsoft';
-              font-size: $small-text;
-          }
-          &:hover {
-              text-shadow: 1px 1px 10px $hoverColor;
-          }
-        }
       }
   }
 }
-@media screen and (min-width:$smallpc-device) { 
-  .menu{
-    display: flex;
-    .menu-list{
+@media screen and (min-width:992px) {
+  .menu {
       display: flex;
-      color: $textColor;
+      .menu-list {
+        display: flex;
+        color: $textColor;
+      }
     }
-  }
 }
