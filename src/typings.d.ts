@@ -5,8 +5,8 @@ declare module 'vue-router' {
     // ?是可选的
     // meta属性包含的内容
     title?: string,
-    requiresAuth: boolean
-    keepAlive: boolean
+    requiresAuth?: boolean
+    keepAlive?: boolean
   }
 }
 
