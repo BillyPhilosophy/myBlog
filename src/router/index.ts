@@ -56,7 +56,15 @@ const routes : RouteRecordRaw[] = [
         meta: {
           title: '欢迎~'
         },
-        component: () => import('@/views/welcome/welCome.vue')
+        component: () => import('@/views/welcomes/Welcomes.vue')
+    },
+    {
+        path: '/404',
+        name: '404',
+        meta: {
+          title: '找不到了~'
+        },
+        component: () => import('@/views/404.vue')
     }
 ];
 

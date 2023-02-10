@@ -1,0 +1,143 @@
+$size: 200px;
+$color :rgb(252, 252, 252);
+@mixin mian() {
+  position: absolute;
+  border-radius: 10px;
+  background-color: $color;
+  width: $size;
+  height: $size;
+  transition: all 0.6s ease-in-out;
+  z-index: 1;
+  border: 4px solid rgb(255, 63, 63);
+}
+
+
+@media screen and (min-width:320px) {
+    .logo{
+      @include font-ura;
+      width: 100%;
+        left: 0;
+        padding: 20px 0;
+        height: auto;
+        position: absolute;
+        @include flex(column,flex-start,center);
+        background-color: rgb(231, 231, 231);
+        top: 50%;
+        transform: translateY(-50%);
+        img {
+            width: 300px;
+        }
+    }
+}
+@media screen and (min-width:992px){
+  .logo{
+    width: 300px;
+    right: 20px;
+    left: unset;
+    align-items: flex-end;
+    background-color: unset;
+  }
+}
+
+.container-out {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: rgb(87, 87, 87);
+}
+.container{
+  position: absolute;
+  transform-style: preserve-3d;
+  &:hover{
+    animation: move 1s ease infinite;
+    .box{
+      @for $i from 1 through 6 {
+        .mian#{$i} {background-color: rgba(255, 146, 164, 0.315);}
+      }
+    }
+  }
+}
+.top {
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+  right: 0;
+  bottom: 0;
+  width: 98vw;
+  height: 98vh;
+  perspective: 1200px;//设置透视
+  perspective-origin: 581px 476px;//设置视角点
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #fff;
+  .box{
+    position: absolute;
+    transform-style: preserve-3d;
+    width: $size;
+    height: $size;
+    transform-origin: calc($size / 2) calc($size / 2);
+    @include flexbox;
+    // text-align: center;
+    font-family: '幼圆';
+    padding: 10px;
+    .mian1{
+      @include mian;
+      transform: rotateX(90deg) translateZ(calc($size / 2));
+    }
+    .mian2{
+      @include mian;
+      transform: rotateX(90deg) translateZ(calc($size / 2 * -1));
+    }
+    .mian3{
+      @include mian;
+      transform: translateZ(calc($size / 2 * -1));
+    }
+    .mian4{
+      @include mian;
+      transform: translateZ(calc($size / 2));
+    }
+    .mian5{
+      @include mian;
+      transform: rotateY(90deg) translateZ(calc($size / 2));
+    }
+    .mian6{
+      @include mian;
+      transform: rotateY(90deg) translateZ(calc($size / 2 * -1));
+    }
+  }
+  .icon-group {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    display: flex;
+    li {
+      margin: 1rem;
+    }
+    .iconfont {
+      font-weight: 600;
+      font-size: 20px;
+      color: rgb(0, 0, 0);
+    }
+
+  }
+}
+
+
+
+@keyframes move {
+
+  0%,
+  100% {
+      top: 0px;
+  }
+
+  25% {
+      top: 20px;
+  }
+
+  75% {
+      top: -20px;
+  }
+}
