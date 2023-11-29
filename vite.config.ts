@@ -42,9 +42,14 @@ export default defineConfig(({mode})=>{
     css: {
       preprocessorOptions: {
         scss: {
+          charset: false,
+          javascriptEnabled: true,
           additionalData: `@import "@/assets/style/mixins.scss";`
         }
-      }
+      },
+      // postcss: {
+      //   plugins: [require('autoprefixer'), require('tailwindcss')]
+      // }
     },
     define: {
       'process.env': process.env

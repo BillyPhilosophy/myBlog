@@ -29,10 +29,8 @@
       <li>
         <router-link to="/index/picture" v-show="false">首页</router-link>
         <el-dropdown>
-          <div class="tw-flex-col tw-justify-between">
-             <p>更多</p>
-            <span>More</span>
-          </div>
+          <p>更多</p>
+          <span>More</span>
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item>

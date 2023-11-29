@@ -13,18 +13,15 @@
           li {
               .drop-item{
                   display: flex;
-                  
               }
               :deep(.el-dropdown){
                   font-size: $big-text;
                   text-align: center;
                   color: $textColor;
-                  
                   span {
                       display: block;
                       margin-top: 4px;
                   }
-                  
               }
               transition: all ease 0.4s;
               cursor: pointer;

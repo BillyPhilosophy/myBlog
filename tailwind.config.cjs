@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     // Example content paths...
@@ -13,10 +12,10 @@ module.exports = {
   variants: {
     extend: {},
   },
-  // plugins: [],
+  plugins: [],
   prefix: 'tw-',
   corePlugins: {
     // tailwind插件选项的启用禁用
-    preflight: false,
+    preflight: false
   }
 }
