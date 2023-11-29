@@ -2,9 +2,8 @@
   "name": "blog-frontend",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "prod": "vite --mode production",
     "build": "vue-tsc --noEmit && vite build",
     "build:prod": "vue-tsc --noEmit && vite build --mode production",

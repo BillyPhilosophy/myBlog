@@ -47,9 +47,9 @@ export default defineConfig(({mode})=>{
           additionalData: `@import "@/assets/style/mixins.scss";`
         }
       },
-      // postcss: {
-      //   plugins: [require('autoprefixer'), require('tailwindcss')]
-      // }
+      postcss: {
+        plugins: [require('autoprefixer'), require('tailwindcss')]
+      }
     },
     define: {
       'process.env': process.env
