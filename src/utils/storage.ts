@@ -5,13 +5,13 @@
 export const getItem = (key: string): any=>{
   try {
     const item = localStorage.getItem(key);
-    if(item===null){
+    if(!item){
       return null;
     }else{
-      return 
+      return JSON.parse(item);
     }
   } catch (error) {
-    
+    return null
   }
 }
 
