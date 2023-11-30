@@ -17,8 +17,15 @@
 </template>
 
 <script setup lang="ts">
-  const isShow = ref(false);
- 
+  import { useStore } from '@/store/main'
+  const store = useStore()
+  const { user, setCancel } = store
+  const isShow = ref(false)
+
+  const getBaseUserInfo = () => {
+
+  }
+  
 </script>
 
 <style lang="scss" scoped>
