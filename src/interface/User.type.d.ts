@@ -2,8 +2,8 @@ declare interface UserEasy {
   avatar: string
   userNo: string
   role: number
-  user_name: string
-  nick_name: string
+  username: string
+  nickname: string
   introduce: string
   banner: string
 }
@@ -11,8 +11,8 @@ declare interface UserAll {
   avatar: string
   userNo: string
   role: number
-  user_name: string
-  nick_name: string
+  username: string
+  nickname: string
   introduce: string
   banner: string
   gender: string
