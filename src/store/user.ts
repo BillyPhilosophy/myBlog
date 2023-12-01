@@ -1,16 +1,24 @@
 import { defineStore } from 'pinia';
 
 export const useUserStore = defineStore('user', () => {
-  const userInfo = reactive({
-    id: '',
+  const userInfo = ref<UserEasy | UserAll>({
+    userNo: '',
     username: '',
     avatar: '',
-    role: '',
+    role: 0,
     nickname: '',
     banner: '',
     introduce: ''
   })
+  const setBaseInfo = (obj:UserEasy) => {
+    userInfo.value = obj
+  }
+  const setAllInfo = (obj:UserAll) => {
+    userInfo.value = obj
+  }
   return {
-    userInfo
+    userInfo,
+    setBaseInfo,
+    setAllInfo
   }
 })

@@ -58,7 +58,7 @@ export default defineConfig(({mode})=>{
       port:5002,
       proxy:{
         '/api': {
-          target: process.env.VITE_BASE_API,
+          target: process.env.VITE_LOCAL_SERVER,
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
         }
