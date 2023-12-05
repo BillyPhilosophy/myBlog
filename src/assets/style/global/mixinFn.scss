@@ -2,11 +2,13 @@
 @mixin font-ura (){
   font-family: 'maoken', 'urafont', '微软雅黑';
   font-weight: 500;
+  font-display: swap;
 }
 
 @mixin font-normal {
   font-family: 'maoken', 'urafont', '微软雅黑';
   font-weight: 500;
+  font-display: swap;
 }
 
 // 1、article-item 的图片边框 
