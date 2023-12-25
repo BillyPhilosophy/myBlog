@@ -1,18 +1,14 @@
 // 重置element的样式
 :deep(.el-input__wrapper) {
-    font-family: 'Thinfont', '幼圆';
+    @include font-normal();
     outline: $border-line $textColor solid;
     border-radius: $border-radius;
     font-weight: 600;
     background-color: $bgColor;
     color: $textColor;
     font-size: $mid-text;
-    
 }
-:deep(.el-input__inner){
-    color: $textColor;
-    font-size: $mid-text;
-}
+
 :deep(.el-radio-group){
     justify-content: flex-end;
 }
