@@ -12,13 +12,13 @@ export const validateUsername = (rule: any, value: any, callback: any) => {
   }
 }
 export const validatePassword = (rule: any, value: any, callback: any) => {
-  const reg = new RegExp(/[a-zA-Z0-9!?.]+/)
+  const reg = new RegExp(/[a-zA-Z0-9!?.@]+/)
   if (value === '') {
     callback(new Error('请输入密码'))
   } else if (value.length < 6 || value.length > 16) {
     callback(new Error('密码长度需要在6-16位之间'))
   } else if (!reg.test(value)) {
-    callback(new Error('密码中不能包含除了!?.之外的特殊符号'))
+    callback(new Error('密码中不能包含除了!?.@之外的特殊符号'))
   } else {
     callback()
   }

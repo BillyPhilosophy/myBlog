@@ -8,11 +8,11 @@
         </el-col>
         <!-- titlebar -->
         <el-col :span="16">
-          <Nav />
+          <Nav/>
         </el-col>
         <!-- userinfo -->
         <el-col :span="4">
-          <RightInfoBox :userinfo="userInfo" @logout="logout" />
+          <RightInfoBox :userInfo="userInfo" @logout="logout" />
         </el-col>
       </el-row>
     </el-header>

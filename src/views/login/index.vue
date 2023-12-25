@@ -43,7 +43,7 @@
           <div class="loginform">
             <div class="tw-w-48 tw-my-5 label--big">
               <p class="zh">登录</p>
-              <p class="en">Login to ADKBLOG</p>
+              <p class="en">Login to D&CBLOG</p>
             </div>
             <ElForm label-position="left" ref="ruleFormRef" :rules="rules" :model="form">
               <ElFormItem prop="username">
@@ -83,9 +83,9 @@
               </div>
               <div class="tw-flex tw-flex-col reg">
                 <p class="register">
-                  欢迎注册到<span class="cartoon"><span>ADK</span>-Blog</span>
+                  欢迎注册到<span class="cartoon"><span>D&C</span>-Blog</span>
                 </p>
-                <p class="shita">Register to ADK-Blog</p>
+                <p class="shita">Register to D&C-Blog</p>
               </div>
             </div>
             <ElForm
@@ -167,7 +167,7 @@ const { submitRegister } = useRegisterMethod(userStore, router, registerForm)
 const { rotateYenter, rotateYleave } = useAnime()
 const { xPos, yPos } = useMousePointer(x, y, 50)
 
-const beforeEnter = el => {
+const beforeEnter = (el: gsap.TweenTarget) => {
   gsap.set(el, {
     rotationY: 90
   })

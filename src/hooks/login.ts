@@ -113,17 +113,18 @@ export const useRegisterMethod = (userStore: any, router: any, registerForm: any
           username: registerForm.username,
           password: registerForm.password,
           nickname: registerForm.nickname
-        }
-        const result = await userRegister(registerParams)
+        };
+        const result = await userRegister(registerParams);
         console.log(result);
-        // if (result.data.code === 200) {
-        //   userStore.user.token = result.data.data
-        //   setItem('user', userStore.user.token)
-        //   router.push('/index')
-        // } else {
-        //   //   注册失败 提示msg
-        //   ElMessage.error(result.data.msg)
-        // }
+        if (result.data.returnCode === 0) {
+          userStore.user.token = result.data.body.token;
+          setItem('user', userStore.user.token);
+          ElMessage.success(result.data.returnMsg);
+          router.push('/index')
+        } else {
+          //   注册失败 提示msg
+          ElMessage.error(result.data.returnMsg)
+        }
       } else {
         ElMessage.error('请校验表单！')
         return false

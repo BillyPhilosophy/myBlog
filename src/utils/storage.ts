@@ -8,7 +8,7 @@ export const getItem = (key: string): any=>{
     if(!item){
       return null;
     }else{
-      return JSON.parse(item);
+      return typeof item === 'object'? JSON.parse(item) : item;
     }
   } catch (error) {
     return null
