@@ -12,7 +12,7 @@
         </el-col>
         <!-- userinfo -->
         <el-col :span="4">
-          <RightInfoBox :userInfo="userInfo" @logout="logout" />
+          <RightInfoBox :userInfo="userInfo" v-model:infoShow="infoShow" @logout="logout" />
         </el-col>
       </el-row>
     </el-header>
@@ -29,6 +29,7 @@ const userStore = useUserStore();
 const { user } = store;
 const { userInfo, setBaseInfo } = userStore;
 const isShow = ref(false);
+const infoShow = ref(false);
 const queryBaseUserInfo = () => {
   if (user.token) {
     getBaseUserInfo().then((res: any) => {
@@ -45,7 +46,20 @@ const queryBaseUserInfo = () => {
 queryBaseUserInfo();
 
 const logout = () =>{
-  
+  store.user.token = ''
+  removeItem('user')
+  setBaseInfo({
+    userNo: '',
+    username: '',
+    avatar: '',
+    role: 0,
+    nickname: '',
+    banner: '',
+    introduce: ''
+  })
+  ElMessage.success('退出登录成功！')
+  isShow.value = false
+  infoShow.value = false
 }
 
 </script>

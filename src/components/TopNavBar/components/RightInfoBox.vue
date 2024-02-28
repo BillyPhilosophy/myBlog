@@ -14,7 +14,7 @@
     <p v-else>
       访客你好 去<RouterLink to="/login" style="color: rgb(124, 12, 226)">登录</RouterLink>
     </p>
-    <div class="container" @mouseenter="infoShow = true" @mouseleave="infoShow = false">
+    <div class="container" @mouseenter="emit('update:infoShow',true)" @mouseleave="emit('update:infoShow',false)">
       <div class="avatar">
         <MyElimage v-if="userInfo.userNo" :img="userInfo.avatar" :zip="2" />
         <MyElimage v-else :img="Logo" alt="占位图片" :zip="2" />
@@ -73,14 +73,19 @@ defineProps({
     default: () => {
       return {}
     }
+  },
+  infoShow:{
+    type:Boolean,
+    default:false
   }
 })
-const emit = defineEmits(['logout'])
+const emit = defineEmits(['logout','update:infoShow'])
 const router = useRouter()
 const logout = () => {
   emit('logout')
 }
-let infoShow = ref(false)
+
+// let infoShow = ref(false)
 </script>
 
 <style lang="scss" scoped>

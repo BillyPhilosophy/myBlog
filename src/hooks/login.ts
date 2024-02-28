@@ -58,14 +58,15 @@ export const useLoginMethod = (userStore: any, router: any, form: any) => {
         const loginParams = { username: form.username, password: form.password }
         const result = await userLogin(loginParams)
         console.log(result)
-        // if (result.body.returnCode === 200) {
-        //   userStore.user.token = result.body
-        //   setItem('user', userStore.user.token)
-        //   router.push('/index')
-        // } else {
-        //   //   登录失败 提示msg
-        //   ElMessage.error(result.data.msg)
-        // }
+        if (result.data.returnCode === 0) {
+          ElMessage.success(result.data.returnMsg);
+          userStore.user.token = result.data.body.token;
+          setItem('user', userStore.user.token);
+          router.push('/index')
+        } else {
+          //   登录失败 提示msg
+          ElMessage.error(result.data.returnMsg)
+        }
       } else {
         ElMessage.error('请校验表单！')
         return false
@@ -115,11 +116,10 @@ export const useRegisterMethod = (userStore: any, router: any, registerForm: any
           nickname: registerForm.nickname
         };
         const result = await userRegister(registerParams);
-        console.log(result);
         if (result.data.returnCode === 0) {
+          ElMessage.success(result.data.returnMsg);
           userStore.user.token = result.data.body.token;
           setItem('user', userStore.user.token);
-          ElMessage.success(result.data.returnMsg);
           router.push('/index')
         } else {
           //   注册失败 提示msg

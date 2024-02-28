@@ -1,6 +1,5 @@
 import { getItem, setItem, removeItem } from "@/utils/storage";
 import { defineStore } from 'pinia';
-console.log(getItem('user'));
 export const useStore = defineStore('main', () => {
   const user = reactive({
     token: getItem('user') || ''
