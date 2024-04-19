@@ -1,0 +1,24 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master  # 这里根据你的主分支名称来设置
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install  # 这里可以根据你的项目类型使用相应的命令来安装依赖
+
+    - name: Build
+      run: npm run build:prod  # 这里可以根据你的项目类型使用相应的命令来构建项目
+
+    - name: Deploy
+      run: |
+        ssh -i ~/.ssh/id_rsa root@124.223.83.131 'cd /opt/1panel/apps/openresty/openresty/www/sites/stairway2heaven.fun/index && git pull origin master'  # 这里假设你使用 SSH 连接到服务器并执行 git pull 命令来部署代码
