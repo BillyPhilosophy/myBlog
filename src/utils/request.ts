@@ -10,7 +10,7 @@ enum AuthStatus {
   TokenDefault = 10103,
 }
 
-const baseUrl = import.meta.env.VITE_BASE_API
+const baseUrl:string = import.meta.env.VITE_BASE_API
 const CancelToken = axios.CancelToken // 用于axios取消请求
 const request: AxiosInstance = axios.create({
   baseURL: baseUrl, //生产环境
