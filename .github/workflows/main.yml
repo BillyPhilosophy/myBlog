@@ -26,4 +26,4 @@ jobs:
 
     - name: Deploy
       run: |
-        ssh -i ~/.ssh/id_rsa root@124.223.83.131 'cd /opt/1panel/apps/openresty/openresty/www/sites/stairway2heaven.fun/index && git pull origin master'  # 这里假设你使用 SSH 连接到服务器并执行 git pull 命令来部署代码
+        ssh -i  ${{ secrets.blog_deploy }} root@124.223.83.131 'cd /opt/1panel/apps/openresty/openresty/www/sites/stairway2heaven.fun/index && git pull origin master'  # 这里假设你使用 SSH 连接到服务器并执行 git pull 命令来部署代码
